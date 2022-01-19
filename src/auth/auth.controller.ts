@@ -10,9 +10,9 @@ export class AuthController {
   sigupLocal(@Body() dto: AuthDto): Promise<Tokens> {
     return this.authService.sigupLocal(dto);
   }
-  @Post('local/sigin')
-  siginLocal() {
-    return this.authService.siginLocal();
+  @Post('local/signin')
+  siginLocal(@Body() dto: AuthDto): Promise<Tokens> {
+    return this.authService.siginLocal(dto);
   }
   @Post('logout')
   logout() {
